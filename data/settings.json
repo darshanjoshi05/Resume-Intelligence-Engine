@@ -1,0 +1,35 @@
+{
+  "targets": {
+    "daily": 3,
+    "weekly": 15
+  },
+  "output": {
+    "default_role": "frontend",
+    "resume_length": "1_page",
+    "keyword_mode": "balanced",
+    "summary_mode": "dynamic_with_override",
+    "section_order": [
+      "SUMMARY",
+      "EDUCATION",
+      "SKILLS",
+      "EXPERIENCE",
+      "PROJECTS",
+      "CERTIFICATIONS",
+      "PUBLICATIONS"
+    ]
+  },
+  "learning": {
+    "enabled": true,
+    "confidence_threshold": 0.62,
+    "learn_from_jds": true
+  },
+  "ui": {
+    "accent": "light_orange"
+  },
+  "nxtwave": {
+    "course": "",
+    "current_topic": "",
+    "streak_days": 0
+  },
+  "openai_model": "gpt-5-mini"
+}

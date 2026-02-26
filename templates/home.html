@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="card hero" style="padding:22px; margin-bottom:16px;">
+    <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+        <div style="min-width:260px;">
+            <div class="welcome" style="margin-bottom:6px;">Welcome, Darshan</div>
+            <h1 class="hero-title" style="margin:0 0 10px 0;">Your productivity dashboard — built for real progress.
+            </h1>
+
+            <p class="muted" style="margin:0 0 14px 0;">
+                Today: <b>{{ stats.today }}</b> / {{ settings.targets.daily }} •
+                Avg match: <b>{{ stats.avg_match }}%</b> •
+                Follow-ups due: <b>{{ stats.due_today }}</b>
+            </p>
+
+            <div class="row gap" style="margin-top:10px; flex-wrap:wrap;">
+                <a class="btn primary" href="/new">+ Create Application</a>
+                <a class="btn secondary" href="/applications">View Applications</a>
+                <a class="btn ghost" href="/settings/profile">Update Profile</a>
+            </div>
+        </div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+            <div class="stat" style="min-width:160px;">
+                <div class="tiny muted">Applications tracked</div>
+                <div class="stat-num">{{ stats.total }}</div>
+            </div>
+            <div class="stat" style="min-width:160px;">
+                <div class="tiny muted">Created today</div>
+                <div class="stat-num">{{ stats.today }}</div>
+            </div>
+            <div class="stat" style="min-width:160px;">
+                <div class="tiny muted">Avg match</div>
+                <div class="stat-num">{{ stats.avg_match }}%</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+        <span class="chip">🎯 Daily target: {{ settings.targets.daily }}</span>
+        <span class="chip">📈 Weekly target: {{ settings.targets.weekly }}</span>
+    </div>
+</section>
+
+<section class="grid-2" style="margin-bottom:16px;">
+    <div class="card" style="padding:18px;">
+        <h2 class="h2" style="margin-top:0;">Deep Work Mission</h2>
+
+        <div class="panel">
+            <div class="panel-title">Today’s objective</div>
+            <ul class="list">
+                <li><b>Hit your daily target</b> ({{ settings.targets.daily }}) — consistency beats motivation.</li>
+                <li><b>Increase match score</b> by pasting full JD + trimming irrelevant items.</li>
+                <li><b>Follow up early</b> when it matters ({{ stats.due_today }} due).</li>
+            </ul>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">Quick actions</div>
+            <div class="row wrap" style="gap:10px;">
+                <a class="btn secondary" href="/new">Paste JD → Generate</a>
+                <a class="btn ghost" href="/applications">Review last outputs</a>
+                <a class="btn ghost" href="/notifications">Notifications</a>
+            </div>
+            <p class="muted small" style="margin-top:10px;">
+                Pro tip: paste <b>requirements + responsibilities</b> for stronger matching and fewer “noise” terms.
+            </p>
+        </div>
+    </div>
+
+    <div class="card" style="padding:18px;">
+        <h2 class="h2" style="margin-top:0;">Insights</h2>
+        <div class="panel">
+            <div class="panel-title">No trend yet</div>
+            <p class="muted small">Create a few applications to populate insights.</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

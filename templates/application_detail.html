@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="card">
+
+    <div class="row between" style="align-items:flex-start;">
+        <div>
+            <h1 class="h1">{{ app.company }} — {{ app.role_title }}</h1>
+            <p class="muted">
+                {{ app.work_mode }} • {{ app.job_location if app.job_location else "UNKNOWN" }} •
+                Relocation: {{ "Yes" if app.relocation_required else "No" }}
+            </p>
+            <p class="muted">Match: <b>{{ app.match_score }}%</b></p>
+        </div>
+        <a class="btn ghost" href="/applications">Back</a>
+    </div>
+
+    <div class="panel" style="margin-top:14px;">
+        <div class="panel-title">Your tailored outputs</div>
+
+        <div class="row wrap" style="margin-top:10px; gap:10px;">
+            <a class="btn secondary" href="/application/{{ app.id }}/pdf">Preview PDF</a>
+
+            {% if app.resume_docx_path %}
+            <a class="btn ghost" href="/download?path={{ app.resume_docx_path|urlencode }}">Download DOCX</a>
+            {% endif %}
+
+            {% if app.cover_letter_path %}
+            <a class="btn ghost" href="/download?path={{ app.cover_letter_path|urlencode }}">Cover Letter</a>
+            {% endif %}
+        </div>
+
+        <div class="panel" style="margin-top:14px;">
+            <div class="panel-title">Resume preview</div>
+
+            {% if preview and preview.basics %}
+            <p class="small"><b>{{ preview.basics.name }}</b></p>
+
+            {% if preview.summary %}
+            <div class="tiny muted" style="margin-top:10px;">Summary</div>
+            <p class="small">{{ preview.summary }}</p>
+            {% endif %}
+
+            {% if preview.skills_lines and preview.skills_lines|length > 0 %}
+            <div class="tiny muted" style="margin-top:10px;">Skills</div>
+            {% for line in preview.skills_lines %}
+            <p class="small" style="margin:6px 0;">{{ line }}</p>
+            {% endfor %}
+            {% endif %}
+
+            {% if preview.experience and preview.experience|length > 0 %}
+            <div class="tiny muted" style="margin-top:10px;">Experience</div>
+            {% for e in preview.experience %}
+            {% if e.title or e.company %}
+            <p class="small"><b>{{ e.title }}{% if e.company %} — {{ e.company }}{% endif %}</b></p>
+            {% endif %}
+            {% if e.bullets %}
+            <ul class="list">
+                {% for b in e.bullets %}
+                <li>{{ b }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+
+            {% if preview.projects and preview.projects|length > 0 %}
+            <div class="tiny muted" style="margin-top:10px;">Projects</div>
+            {% for p in preview.projects %}
+            <p class="small"><b>{{ p.name }}</b>{% if p.tech %} — {{ p.tech }}{% endif %}</p>
+            {% if p.bullets %}
+            <ul class="list">
+                {% for b in p.bullets %}
+                <li>{{ b }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+
+            <div class="row wrap" style="margin-top:14px;">
+                <form method="post" action="/application/{{ app.id }}/generate-resume">
+                    <button class="btn primary" type="submit">Generate Resume (DOCX + PDF)</button>
+                </form>
+
+                <form method="post" action="/application/{{ app.id }}/generate-cover">
+                    <button class="btn ghost" type="submit">Generate Cover Letter</button>
+                </form>
+            </div>
+
+            <p class="muted small" style="margin-top:10px;">
+                Files are generated only when you click the buttons above.
+            </p>
+            {% else %}
+            <p class="muted small">Preview not available.</p>
+            {% endif %}
+        </div>
+
+        {% if not app.resume_docx_path and not app.cover_letter_path %}
+        <p class="muted small" style="margin-top:10px;">No output files saved for this application yet.</p>
+        {% endif %}
+    </div>
+
+    {% set plan = report.learning_plan if report.learning_plan else [] %}
+    <div class="panel" style="margin-top:14px;">
+        <div class="panel-title">Upgrade plan (to increase interview odds)</div>
+        {% if plan and plan|length > 0 %}
+        <ul class="list" style="margin-top:10px;">
+            {% for t in plan %}
+            <li>{{ t }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="muted small" style="margin-top:10px;">No major gaps detected.</p>
+        {% endif %}
+    </div>
+
+    {% set roles = report.suggested_roles if report.suggested_roles else [] %}
+    {% if roles and roles|length > 0 %}
+    <div class="panel" style="margin-top:14px;">
+        <div class="panel-title">Suggested roles (better fit lanes)</div>
+        <div class="row wrap" style="margin-top:10px;">
+            {% for r in roles %}
+            <span class="chip">{{ r }}</span>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="panel" style="margin-top:14px;">
+        <div class="panel-title">Recruiter message</div>
+        {% if app.recruiter_msg %}
+        <p class="small" style="white-space:pre-wrap;">{{ app.recruiter_msg }}</p>
+        {% else %}
+        <p class="muted small">No recruiter message saved yet.</p>
+        {% endif %}
+    </div>
+
+    <div class="panel" style="margin-top:14px;">
+        <div class="panel-title">Job Description</div>
+        <details>
+            <summary class="muted">Click to expand</summary>
+            <pre class="muted small" style="white-space:pre-wrap; margin-top:12px;">{{ app.jd_text }}</pre>
+        </details>
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+    <div class="row between">
+        <div>
+            <h1 class="h1">Profile</h1>
+            <p class="muted">Edit your master profile. This is used to generate every resume.</p>
+        </div>
+        <a class="btn ghost" href="/">Back</a>
+    </div>
+
+    {% if saved %}
+    <div class="panel" style="border-color: rgba(24,208,124,.35);">
+        ✅ Profile saved successfully.
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <div class="panel" style="border-color: rgba(255,59,59,.35);">
+        ❌ {{ error }}
+    </div>
+    {% endif %}
+
+    <form class="form" method="post" action="/profile/save">
+        <div class="field">
+            <label>Master Profile JSON</label>
+            <textarea name="profile_json" rows="20">{{ profile_json }}</textarea>
+            <p class="muted small">
+                Tip: Keep it truthful. This is your master source. The app will tailor based on job description.
+            </p>
+        </div>
+
+        <div class="row gap">
+            <button class="btn primary" type="submit">Save Profile</button>
+            <a class="btn secondary" href="/profile">Reload</a>
+        </div>
+    </form>
+</section>
+{% endblock %}

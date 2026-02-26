@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+
+    <div class="row between" style="align-items:flex-start;">
+        <div>
+            <h1 class="h1">Applications</h1>
+            <p class="muted" style="margin:6px 0 0;">Track role, location, match score, and download outputs.</p>
+        </div>
+        <a class="btn primary" href="/new">+ New</a>
+    </div>
+
+    <div class="table-wrap table-premium" style="margin-top:14px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:120px;">Date</th>
+                    <th style="width:220px;">Company</th>
+                    <th>Role</th>
+                    <th style="width:180px;">Location</th>
+                    <th style="width:110px;">Match</th>
+                    <th style="width:240px;">Files</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for a in apps %}
+                <tr>
+                    <td class="nowrap">
+                        <div class="cell-strong">{{ a.created_date or "—" }}</div>
+                    </td>
+
+                    <td>
+                        <div class="cell-strong">{{ a.company }}</div>
+                    </td>
+
+                    <td>
+                        <a class="link cell-strong" href="/application/{{ a.id }}">{{ a.role_title }}</a>
+                        {% if a.role_family %}
+                        <div class="tiny muted" style="margin-top:4px;">{{ a.role_family }}</div>
+                        {% endif %}
+                    </td>
+
+                    <td>
+                        <div class="cell-strong">{{ a.job_location or "—" }}</div>
+                        <div class="tiny muted" style="margin-top:4px;">{{ a.work_mode or "UNKNOWN" }}</div>
+                    </td>
+
+                    <td>
+                        <span class="pill-score">{{ a.match_score }}%</span>
+                    </td>
+
+                    <td class="nowrap">
+                        <div class="file-links">
+
+                            <!-- ✅ Preview triggers on-demand pdf generation -->
+                            <a class="link" href="/application/{{ a.id }}/pdf">Preview</a>
+
+                            {% if a.resume_docx_path %}
+                            <a class="link" href="/download?path={{ a.resume_docx_path|urlencode }}">DOCX</a>
+                            {% endif %}
+
+                            {% if a.cover_letter_path %}
+                            <a class="link" href="/download?path={{ a.cover_letter_path|urlencode }}">Cover</a>
+                            {% endif %}
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</section>
+{% endblock %}

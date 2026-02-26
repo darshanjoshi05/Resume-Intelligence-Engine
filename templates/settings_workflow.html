@@ -1,0 +1,24 @@
+{% extends "settings_shell.html" %}
+{% block settings_content %}
+
+<form method="post" action="/settings/workflow/save">
+    <div class="panel">
+        <div class="panel-title">Workflow Targets</div>
+        <div class="two">
+            <div>
+                <div class="label">Daily applications target</div>
+                <input class="input" type="number" name="daily" value="{{ settings.targets.daily }}" />
+            </div>
+            <div>
+                <div class="label">Weekly applications target</div>
+                <input class="input" type="number" name="weekly" value="{{ settings.targets.weekly }}" />
+            </div>
+        </div>
+    </div>
+
+    <div class="btnbar">
+        <button class="btn primary" type="submit">Save Workflow</button>
+    </div>
+</form>
+
+{% endblock %}

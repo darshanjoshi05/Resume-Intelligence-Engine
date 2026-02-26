@@ -1,0 +1,79 @@
+{% extends "settings_shell.html" %}
+{% block settings_content %}
+
+<form method="post" action="/settings/output/save">
+    {% set out = settings.get("output", {}) %}
+    <div class="panel">
+        <div class="panel-title">Resume Output Defaults</div>
+
+        <div class="two">
+            <div>
+                <div class="label">Default role bias</div>
+                <select class="input" name="default_role">
+                    <option value="frontend" {% if out.get("default_role","frontend")=='frontend' %}selected{% endif %}>
+                        Frontend</option>
+                    <option value="fullstack" {% if out.get("default_role","frontend")=='fullstack' %}selected{% endif
+                        %}>Full
+                        Stack</option>
+                    <option value="backend" {% if out.get("default_role","frontend")=='backend' %}selected{% endif %}>
+                        Backend
+                    </option>
+                    <option value="data" {% if out.get("default_role","frontend")=='data' %}selected{% endif %}>Data
+                    </option>
+                </select>
+            </div>
+
+            <div>
+                <div class="label">Resume length</div>
+                <select class="input" name="resume_length">
+                    <option value="1_page" {% if out.get("resume_length","1_page")=='1_page' %}selected{% endif %}>1
+                        page
+                    </option>
+                    <option value="2_pages" {% if out.get("resume_length","1_page")=='2_pages' %}selected{% endif %}>2
+                        pages
+                    </option>
+                </select>
+            </div>
+
+            <div>
+                <div class="label">Keyword mode</div>
+                <select class="input" name="keyword_mode">
+                    <option value="safe" {% if out.get("keyword_mode","balanced")=='safe' %}selected{% endif %}>Safe
+                    </option>
+                    <option value="balanced" {% if out.get("keyword_mode","balanced")=='balanced' %}selected{% endif %}>
+                        Balanced</option>
+                    <option value="aggressive" {% if out.get("keyword_mode","balanced")=='aggressive' %}selected{% endif
+                        %}>
+                        Aggressive</option>
+                </select>
+            </div>
+
+            <div>
+                <div class="label">Summary mode</div>
+                <select class="input" name="summary_mode">
+                    <option value="dynamic_with_override" {% if
+                        out.get("summary_mode","dynamic_with_override")=='dynamic_with_override' %}selected{% endif %}>
+                        Dynamic (use custom if provided)</option>
+                    <option value="always_dynamic" {% if
+                        out.get("summary_mode","dynamic_with_override")=='always_dynamic' %}selected{% endif %}>
+                        Always dynamic</option>
+                    <option value="always_custom" {% if out.get("summary_mode","dynamic_with_override")=='always_custom'
+                        %}selected{% endif %}>
+                        Always custom</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="muted" style="margin-top:10px;font-size:12px;">
+            Safe = minimal injection. Aggressive = pushes JD keywords harder (risk: sounding fake if your projects don’t
+            support it).
+        </div>
+    </div>
+
+    <div class="btnbar">
+        <button class="btn primary" type="submit">Save Output Defaults</button>
+    </div>
+</form>
+
+{% endblock %}

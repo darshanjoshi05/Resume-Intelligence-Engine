@@ -1,0 +1,137 @@
+{
+  "basics": {
+    "name": "Darshan Joshi",
+    "email": "joshidarshan193@gmail.com",
+    "phone": "+19472405099",
+    "linkedin": "www.linkedin.com/in/darshanjoshi05",
+    "location": "Southfield, Michigan, United States",
+    "open_to_relocation": true
+  },
+  "summary": "",
+  "skills": {
+    "Programming": [
+      "Algorithms",
+      "C",
+      "C++",
+      "Data Structures",
+      "Java",
+      "JavaScript",
+      "OOP",
+      "Python",
+      "SQL"
+    ],
+    "Web & Frontend": [
+      "CSS",
+      "HTML",
+      "ReactJS",
+      "REST"
+    ],
+    "Data & Databases": [
+      "MongoDB",
+      "Relational Databases"
+    ],
+    "Data Analysis & ML": [
+      "Data Visualization",
+      "Machine Learning",
+      "Model Evaluation",
+      "NumPy",
+      "Pandas",
+      "scikit-learn"
+    ],
+    "Tools": [
+      "Git",
+      "Jupyter Notebook",
+      "Power BI",
+      "Tableau"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Research Assistant",
+      "company": "Lawrence Technological University",
+      "location": "Michigan, United States",
+      "start": "2024-12",
+      "end": "Present",
+      "bullets": [
+        "Worked in a collaborative team environment to translate project requirements into working software and data solutions.",
+        "Supported development, testing, and documentation of classroom analytics and security-focused software projects using Python.",
+        "Prepared technical documentation and presented design decisions, results, and improvements to academic and industry audiences."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Classroom Behaviour Detection",
+      "org": "Lawrence Technological University",
+      "dates": "Jan 2025 \u2013 Apr 2025",
+      "tags": [
+        "Python",
+        "ML",
+        "Computer Vision",
+        "Data Pipelines"
+      ],
+      "bullets": [
+        "Developed and tested Python-based application components to analyze classroom engagement from video datasets.",
+        "Built data preprocessing, model execution, and result visualization pipelines as part of a team-driven analytics project.",
+        "Improved model reliability on noisy and imbalanced data through structured problem-solving and experimentation."
+      ]
+    },
+    {
+      "name": "Buffer Overflow Vulnerability Analysis",
+      "org": "Jawaharlal Nehru Technological University",
+      "dates": "Jan 2024 \u2013 Jun 2024",
+      "tags": [
+        "C",
+        "GDB",
+        "Security"
+      ],
+      "bullets": [
+        "Analyzed buffer overflow vulnerabilities in a 32-bit C environment using GDB to understand memory layouts, stack behavior, and exploit vectors.",
+        "Developed and tested exploit code to demonstrate privilege escalation, then evaluated countermeasures such as ASLR and stack protection.",
+        "Used C and GDB to diagnose and exploit buffer overflows systematically."
+      ]
+    },
+    {
+      "name": "Blockchain Based Login System",
+      "org": "Lawrence Technological University",
+      "dates": "Jan 2025 \u2013 Apr 2025",
+      "tags": [
+        "Ethereum",
+        "MetaMask",
+        "Web3.js"
+      ],
+      "bullets": [
+        "Developed a blockchain-based login system using Ethereum and MetaMask, implementing decentralized authentication using digital signatures.",
+        "Integrated MetaMask with Web3.js to enable cryptographic verification and a seamless user login workflow.",
+        "Designed a scalable approach to reduce risks of centralized password storage and improve user control over identity."
+      ]
+    },
+    {
+      "name": "Global Harvest Imports",
+      "org": "Lawrence Technological University",
+      "dates": "Aug 2024 \u2013 Dec 2024",
+      "tags": [
+        "Databases",
+        "Backend"
+      ],
+      "bullets": [
+        "Collaborated with teammates to understand system requirements, data relationships, and user needs.",
+        "Designed and implemented database schemas and validation logic to ensure reliable application data.",
+        "Contributed to discussions on system architecture and backend implementation."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master\u2019s, Computer Science",
+      "school": "Lawrence Technological University",
+      "dates": "Jan 2024 \u2013 May 2026"
+    },
+    {
+      "degree": "B. Tech, Computer Science",
+      "school": "Jawaharlal Nehru Technological University",
+      "dates": "Aug 2019 \u2013 May 2023"
+    }
+  ],
+  "publications": []
+}

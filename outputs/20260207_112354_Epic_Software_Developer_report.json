@@ -1,0 +1,23 @@
+{
+  "company": "Epic",
+  "role_title": "Software Developer",
+  "role_family": "SOFTWARE_ENGINEER",
+  "match_score": 60.0,
+  "matched_skills": [
+    "machine learning"
+  ],
+  "bridges": [
+    {
+      "from": "REST Concepts",
+      "to": "REST",
+      "phrase": "REST concepts (APIs; aligned with REST terminology)"
+    },
+    {
+      "from": "REST Concepts",
+      "to": "API",
+      "phrase": "REST concepts (APIs; aligned with API terminology)"
+    }
+  ],
+  "missing_terms": [],
+  "recruiter_message": "Hi! I\u2019m Darshan Joshi. I just applied for the Software Developer role at Epic and wanted to reach out. My background includes full-stack development, strong fundamentals in Java/Python/SQL, and hands-on project experience. I\u2019d love to connect and learn more about the team\u2019s needs."
+}

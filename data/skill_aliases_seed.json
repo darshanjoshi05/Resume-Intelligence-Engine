@@ -1,0 +1,31 @@
+{
+  "SQL": [
+    "PostgreSQL",
+    "MySQL",
+    "SQLite",
+    "SQL Server",
+    "Oracle SQL"
+  ],
+  "REST Concepts": [
+    "REST",
+    "RESTful APIs",
+    "API",
+    "Web Services"
+  ],
+  "ReactJS": [
+    "React",
+    "React.js",
+    "Frontend",
+    "UI"
+  ],
+  "Java": [
+    "Java 8",
+    "Java 11",
+    "JVM",
+    "Object-Oriented Java"
+  ],
+  "MongoDB": [
+    "NoSQL",
+    "Document DB"
+  ]
+}

@@ -1,0 +1,839 @@
+{
+  "terms": {
+    "sql": {
+      "count": 20,
+      "roles": {
+        "DATA_ANALYST": 8,
+        "FULLSTACK_GENERAL": 10,
+        "APPLICATION_DEVELOPER": 1,
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "tableau": {
+      "count": 5,
+      "roles": {
+        "DATA_ANALYST": 5
+      }
+    },
+    "power bi": {
+      "count": 5,
+      "roles": {
+        "DATA_ANALYST": 5
+      }
+    },
+    "python": {
+      "count": 17,
+      "roles": {
+        "APPLICATION_DEVELOPER": 5,
+        "JAVA_FULLSTACK": 4,
+        "DATA_ANALYST": 2,
+        "FULLSTACK_GENERAL": 6
+      }
+    },
+    "api": {
+      "count": 22,
+      "roles": {
+        "APPLICATION_DEVELOPER": 5,
+        "DATA_ANALYST": 2,
+        "FULLSTACK_GENERAL": 11,
+        "JAVA_FULLSTACK": 4
+      }
+    },
+    "oop": {
+      "count": 7,
+      "roles": {
+        "APPLICATION_DEVELOPER": 3,
+        "FULLSTACK_GENERAL": 3,
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "off/leave": {
+      "count": 3,
+      "roles": {
+        "APPLICATION_DEVELOPER": 3
+      }
+    },
+    "teksystems.com": {
+      "count": 3,
+      "roles": {
+        "APPLICATION_DEVELOPER": 3
+      }
+    },
+    "medical": {
+      "count": 2,
+      "roles": {
+        "APPLICATION_DEVELOPER": 2
+      }
+    },
+    "dental & vision": {
+      "count": 2,
+      "roles": {
+        "APPLICATION_DEVELOPER": 2
+      }
+    },
+    "critical illness": {
+      "count": 2,
+      "roles": {
+        "APPLICATION_DEVELOPER": 2
+      }
+    },
+    "accident": {
+      "count": 2,
+      "roles": {
+        "APPLICATION_DEVELOPER": 2
+      }
+    },
+    "and hospital": {
+      "count": 2,
+      "roles": {
+        "APPLICATION_DEVELOPER": 2
+      }
+    },
+    "401(k) retirement plan \u2013 pre-tax and roth post-tax contributions available": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "life insurance (voluntary life & ad&d for the employee and dependents)": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "short and long-term disability": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "health spending account (hsa)": {
+      "count": 2,
+      "roles": {
+        "APPLICATION_DEVELOPER": 2
+      }
+    },
+    "transportation benefits": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "employee assistance program": {
+      "count": 2,
+      "roles": {
+        "APPLICATION_DEVELOPER": 2
+      }
+    },
+    "about teksystems and teksystems global services": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "git": {
+      "count": 18,
+      "roles": {
+        "APPLICATION_DEVELOPER": 2,
+        "FULLSTACK_GENERAL": 14,
+        "DATA_ANALYST": 1,
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "owner/operator": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "employer/veterans/disabled": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "must have relevant technical hands on systems design and commissioning of digital hvac controls systems": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "strong customer and communication skills to a non-technical audience": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "must have experience with microsoft word and excel": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "must work in a team environment": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "regular and reliable attendance": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "including the ability to work extended hours and weekends as required": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "equal opportunity employer": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "notice to prospective employees": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    ".net": {
+      "count": 7,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1,
+        "FULLSTACK_GENERAL": 3,
+        "JAVA_FULLSTACK": 3
+      }
+    },
+    "ai/ml": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "science/it": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "java": {
+      "count": 27,
+      "roles": {
+        "JAVA_FULLSTACK": 5,
+        "APPLICATION_DEVELOPER": 5,
+        "FULLSTACK_GENERAL": 15,
+        "DATA_ANALYST": 2
+      }
+    },
+    "hours/week": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "amazon.jobs/content/en/how-we-hire/accommodations": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "country/region": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "hiring.amazon.com/why-amazon/benefits": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "basic qualifications": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "graduating june 2028 and beyond": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "majoring in computer science": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "software engineering": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "or related stem field": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "able to start work in june 2026": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "mi": {
+      "count": 2,
+      "roles": {
+        "JAVA_FULLSTACK": 1,
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "programming experience with at least one modern language such as java": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "or c++ including object-oriented design": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "usa": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "detroit - 18.00 - 65.00 usd hourly": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "previous technical internship(s)": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "if applicable": {
+      "count": 1,
+      "roles": {
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "h4": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "c++": {
+      "count": 3,
+      "roles": {
+        "APPLICATION_DEVELOPER": 3
+      }
+    },
+    "python development on a cad platform": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "mechanical engineering": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "education required": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "bachelor's degree": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "the position requires a c++ cae engineer with mechanical engineering knowledge": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "job type & location": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "the pay range for this position is $47.00 - $60.00/hr": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "unit testing": {
+      "count": 3,
+      "roles": {
+        "APPLICATION_DEVELOPER": 3
+      }
+    },
+    "express": {
+      "count": 3,
+      "roles": {
+        "APPLICATION_DEVELOPER": 3
+      }
+    },
+    "docker": {
+      "count": 6,
+      "roles": {
+        "APPLICATION_DEVELOPER": 5,
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "c#": {
+      "count": 16,
+      "roles": {
+        "APPLICATION_DEVELOPER": 8,
+        "FULLSTACK_GENERAL": 3,
+        "DATA_ANALYST": 2,
+        "JAVA_FULLSTACK": 3
+      }
+    },
+    "c": {
+      "count": 34,
+      "roles": {
+        "APPLICATION_DEVELOPER": 11,
+        "SOFTWARE_ENGINEER": 1,
+        "DATA_ANALYST": 5,
+        "FULLSTACK_GENERAL": 13,
+        "JAVA_FULLSTACK": 4
+      }
+    },
+    "rest": {
+      "count": 17,
+      "roles": {
+        "APPLICATION_DEVELOPER": 4,
+        "SOFTWARE_ENGINEER": 1,
+        "FULLSTACK_GENERAL": 11,
+        "JAVA_FULLSTACK": 1
+      }
+    },
+    "go": {
+      "count": 21,
+      "roles": {
+        "APPLICATION_DEVELOPER": 4,
+        "DATA_ANALYST": 4,
+        "FULLSTACK_GENERAL": 10,
+        "JAVA_FULLSTACK": 3
+      }
+    },
+    "authorization": {
+      "count": 1,
+      "roles": {
+        "SOFTWARE_ENGINEER": 1
+      }
+    },
+    "ui/ux": {
+      "count": 1,
+      "roles": {
+        "SOFTWARE_ENGINEER": 1
+      }
+    },
+    "semester/quarter": {
+      "count": 1,
+      "roles": {
+        "SOFTWARE_ENGINEER": 1
+      }
+    },
+    "to/from": {
+      "count": 1,
+      "roles": {
+        "SOFTWARE_ENGINEER": 1
+      }
+    },
+    "positions/tasks": {
+      "count": 1,
+      "roles": {
+        "SOFTWARE_ENGINEER": 1
+      }
+    },
+    "data pipelines": {
+      "count": 1,
+      "roles": {
+        "DATA_ANALYST": 1
+      }
+    },
+    "etl": {
+      "count": 2,
+      "roles": {
+        "DATA_ANALYST": 2
+      }
+    },
+    "aws": {
+      "count": 2,
+      "roles": {
+        "DATA_ANALYST": 1,
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "sem/suite": {
+      "count": 1,
+      "roles": {
+        "DATA_ANALYST": 1
+      }
+    },
+    "python/scala": {
+      "count": 1,
+      "roles": {
+        "DATA_ANALYST": 1
+      }
+    },
+    "javascript": {
+      "count": 15,
+      "roles": {
+        "FULLSTACK_GENERAL": 15
+      }
+    },
+    "sql server": {
+      "count": 4,
+      "roles": {
+        "FULLSTACK_GENERAL": 3,
+        "DATA_ANALYST": 1
+      }
+    },
+    "mongodb": {
+      "count": 10,
+      "roles": {
+        "FULLSTACK_GENERAL": 9,
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "angular": {
+      "count": 8,
+      "roles": {
+        "FULLSTACK_GENERAL": 8
+      }
+    },
+    "redis": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "html": {
+      "count": 10,
+      "roles": {
+        "FULLSTACK_GENERAL": 10
+      }
+    },
+    "css": {
+      "count": 15,
+      "roles": {
+        "FULLSTACK_GENERAL": 15
+      }
+    },
+    "security": {
+      "count": 1,
+      "roles": {
+        "DATA_ANALYST": 1
+      }
+    },
+    "github": {
+      "count": 2,
+      "roles": {
+        "DATA_ANALYST": 1,
+        "FULLSTACK_GENERAL": 1
+      }
+    },
+    "agile/devops": {
+      "count": 1,
+      "roles": {
+        "DATA_ANALYST": 1
+      }
+    },
+    "git/github": {
+      "count": 2,
+      "roles": {
+        "DATA_ANALYST": 1,
+        "FULLSTACK_GENERAL": 1
+      }
+    },
+    "oracle": {
+      "count": 2,
+      "roles": {
+        "DATA_ANALYST": 2
+      }
+    },
+    "data structures": {
+      "count": 2,
+      "roles": {
+        "FULLSTACK_GENERAL": 1,
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "algorithms": {
+      "count": 2,
+      "roles": {
+        "FULLSTACK_GENERAL": 1,
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "react": {
+      "count": 11,
+      "roles": {
+        "FULLSTACK_GENERAL": 11
+      }
+    },
+    "nosql": {
+      "count": 2,
+      "roles": {
+        "FULLSTACK_GENERAL": 1,
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "node": {
+      "count": 5,
+      "roles": {
+        "FULLSTACK_GENERAL": 5
+      }
+    },
+    "sql/mongodb": {
+      "count": 5,
+      "roles": {
+        "FULLSTACK_GENERAL": 5
+      }
+    },
+    "spring boot": {
+      "count": 4,
+      "roles": {
+        "JAVA_FULLSTACK": 4
+      }
+    },
+    "spring": {
+      "count": 4,
+      "roles": {
+        "JAVA_FULLSTACK": 4
+      }
+    },
+    "pandas": {
+      "count": 1,
+      "roles": {
+        "DATA_ANALYST": 1
+      }
+    },
+    "numpy": {
+      "count": 1,
+      "roles": {
+        "DATA_ANALYST": 1
+      }
+    },
+    "bi/tableau": {
+      "count": 1,
+      "roles": {
+        "DATA_ANALYST": 1
+      }
+    },
+    "kubernetes": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "cicd": {
+      "count": 1,
+      "roles": {
+        "APPLICATION_DEVELOPER": 1
+      }
+    },
+    "performance optimization": {
+      "count": 5,
+      "roles": {
+        "FULLSTACK_GENERAL": 5
+      }
+    },
+    "typescript": {
+      "count": 5,
+      "roles": {
+        "FULLSTACK_GENERAL": 5
+      }
+    },
+    "graphql": {
+      "count": 5,
+      "roles": {
+        "FULLSTACK_GENERAL": 5
+      }
+    },
+    "next.js": {
+      "count": 2,
+      "roles": {
+        "FULLSTACK_GENERAL": 2
+      }
+    },
+    "cross-browser compatibility": {
+      "count": 2,
+      "roles": {
+        "FULLSTACK_GENERAL": 2
+      }
+    },
+    "component documentation": {
+      "count": 2,
+      "roles": {
+        "FULLSTACK_GENERAL": 2
+      }
+    },
+    "lighthouse scoring": {
+      "count": 2,
+      "roles": {
+        "FULLSTACK_GENERAL": 2
+      }
+    },
+    "responsive design": {
+      "count": 2,
+      "roles": {
+        "FULLSTACK_GENERAL": 2
+      }
+    },
+    "styled components": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "code splitting": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "accessibility": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "lazy loading": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "tailwindcss": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "ui testing": {
+      "count": 2,
+      "roles": {
+        "FULLSTACK_GENERAL": 2
+      }
+    },
+    "playwright": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "lighthouse": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "storybook": {
+      "count": 2,
+      "roles": {
+        "FULLSTACK_GENERAL": 2
+      }
+    },
+    "wcag 2.1": {
+      "count": 2,
+      "roles": {
+        "FULLSTACK_GENERAL": 2
+      }
+    },
+    "cypress": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "webpack": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "zustand": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "rollup": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "redux": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "vite": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "wcag": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "mobx": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "jest": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    },
+    "pwa": {
+      "count": 2,
+      "roles": {
+        "FULLSTACK_GENERAL": 2
+      }
+    },
+    "nextjs": {
+      "count": 3,
+      "roles": {
+        "FULLSTACK_GENERAL": 3
+      }
+    }
+  },
+  "updated_at": "2026-02-14 14:41"
+}

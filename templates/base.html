@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{{ title or "Career OS" }}</title>
+
+    <!-- Clean workspace fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script defer src="/static/app.js"></script>
+</head>
+
+<body>
+    <!-- Background -->
+    <div class="bg"></div>
+
+    <!-- Topbar -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <!-- Burger ONLY on mobile -->
+            <button class="icon-btn mobile-only" id="menuBtn" aria-label="Open menu">☰</button>
+
+            <a class="brand" href="/">
+                <div class="brand-logo"></div>
+                <div class="brand-text">
+                    <div class="brand-title">Joshi's OS</div>
+                    <div class="brand-sub">Notion-style focus • Resume intelligence</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Desktop nav (ONLY on desktop) -->
+        <nav class="topbar-right desktop-only">
+            <a class="nav-link {% if title=='Home' %}active{% endif %}" href="/">Home</a>
+            <a class="nav-link {% if title=='Create' %}active{% endif %}" href="/new">Create</a>
+            <a class="nav-link {% if title=='Applications' %}active{% endif %}" href="/applications">Applications</a>
+            <a class="nav-link {% if title=='Settings' %}active{% endif %}" href="/settings">Settings</a>
+
+            <a class="nav-icon" href="/notifications" title="Notifications">
+                🔔
+                {% if notif_count and notif_count > 0 %}
+                <span class="badge">{{ notif_count }}</span>
+                {% endif %}
+            </a>
+
+            <button class="nav-icon" id="themeToggle" type="button" title="Toggle theme">🌙</button>
+        </nav>
+
+        <!-- Mobile right icons -->
+        <nav class="topbar-right mobile-only">
+            <a class="nav-icon" href="/notifications" title="Notifications">
+                🔔
+                {% if notif_count and notif_count > 0 %}
+                <span class="badge">{{ notif_count }}</span>
+                {% endif %}
+            </a>
+            <button class="nav-icon" id="themeToggle" type="button" title="Toggle theme">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Mobile Sidebar drawer -->
+    <aside class="sidebar mobile-only" id="sidebar">
+        <div class="sidebar-head">
+            <div class="sidebar-title">Navigation</div>
+            <button class="icon-btn" id="closeBtn" aria-label="Close menu">✕</button>
+        </div>
+
+        <a class="side-link" href="/">🏠 Home</a>
+        <a class="side-link" href="/new">➕ Create</a>
+        <a class="side-link" href="/applications">📋 Applications</a>
+        <a class="side-link" href="/settings">⚙️ Settings</a>
+        <a class="side-link" href="/notifications">🔔 Notifications</a>
+
+        <div class="sidebar-foot">
+            <div class="tiny">Local-first • your data stays on your machine</div>
+        </div>
+    </aside>
+
+    <div class="overlay mobile-only" id="overlay"></div>
+
+    <main class="shell">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="tiny">Local-first • your data stays on your machine</div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+{% extends "settings_shell.html" %}
+{% block settings_content %}
+
+<form method="post" action="/settings/profile/save">
+
+    <div class="panel">
+        <div class="panel-title">Basic Info</div>
+        <div class="two">
+            <div>
+                <div class="label">Full name</div>
+                <input class="input" name="name" value="{{ p.basics.name }}" />
+            </div>
+            <div>
+                <div class="label">Location</div>
+                <input class="input" name="location" value="{{ p.basics.location }}" />
+            </div>
+            <div>
+                <div class="label">Email</div>
+                <input class="input" name="email" value="{{ p.basics.email }}" />
+            </div>
+            <div>
+                <div class="label">Phone</div>
+                <input class="input" name="phone" value="{{ p.basics.phone }}" />
+            </div>
+            <div>
+                <div class="label">LinkedIn</div>
+                <input class="input" name="linkedin" value="{{ p.basics.linkedin }}" />
+            </div>
+            <div>
+                <div class="label">Open to relocation</div>
+                <select class="input" name="open_to_relocation">
+                    <option value="true" {% if p.basics.open_to_relocation %}selected{% endif %}>Yes</option>
+                    <option value="false" {% if not p.basics.open_to_relocation %}selected{% endif %}>No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-title">Professional Summary</div>
+        <div class="label">Keep it tight and impact-first (2–4 lines).</div>
+        <textarea class="input" name="summary" rows="4">{{ p.summary }}</textarea>
+    </div>
+
+    <div class="panel">
+        <div class="panel-title">Skills</div>
+
+        <div class="label">Programming</div>
+        <textarea class="input" name="skills_programming" rows="2">{{ skills_text["Programming"] }}</textarea>
+
+        <div class="label" style="margin-top:10px;">Web & Frontend</div>
+        <textarea class="input" name="skills_web" rows="2">{{ skills_text["Web & Frontend"] }}</textarea>
+
+        <div class="label" style="margin-top:10px;">Data & Databases</div>
+        <textarea class="input" name="skills_data" rows="2">{{ skills_text["Data & Databases"] }}</textarea>
+
+        <div class="label" style="margin-top:10px;">Data Analysis & ML</div>
+        <textarea class="input" name="skills_ml" rows="2">{{ skills_text["Data Analysis & ML"] }}</textarea>
+
+        <div class="label" style="margin-top:10px;">Tools</div>
+        <textarea class="input" name="skills_tools" rows="2">{{ skills_text["Tools"] }}</textarea>
+    </div>
+
+    <div class="panel">
+        <div class="panel-title">Experience</div>
+        <div class="label">Format: Title | Company | Location | Start | End, then bullets.</div>
+        <textarea class="input" name="experience_block" rows="10">{{ experience_block }}</textarea>
+    </div>
+
+    <div class="panel">
+        <div class="panel-title">Projects</div>
+        <div class="label">Format: Project | Org | Dates | Tags, then bullets.</div>
+        <textarea class="input" name="projects_block" rows="10">{{ projects_block }}</textarea>
+    </div>
+
+    <div class="panel">
+        <div class="panel-title">Education</div>
+        <div class="label">One per line: Degree | School | Dates</div>
+        <textarea class="input" name="education_lines" rows="5">{{ education_lines }}</textarea>
+    </div>
+
+    <div class="panel">
+        <div class="panel-title">Publications</div>
+        <div class="label">One per line: Title | Venue | Date | Link</div>
+        <textarea class="input" name="publication_lines" rows="4">{{ publication_lines }}</textarea>
+    </div>
+
+    <div class="btnbar">
+        <button class="btn primary" type="submit">Save Profile</button>
+    </div>
+
+</form>
+
+{% endblock %}

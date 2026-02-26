@@ -1,0 +1,96 @@
+{
+  "software_engineer_classic": {
+    "label": "Software Engineer (Classic ATS)",
+    "sections": [
+      "Header",
+      "Summary",
+      "Skills",
+      "Experience",
+      "Projects",
+      "Education",
+      "Publications"
+    ]
+  },
+  "java_fullstack": {
+    "label": "Java Full Stack",
+    "sections": [
+      "Header",
+      "Summary",
+      "Skills",
+      "Experience",
+      "Projects",
+      "Education",
+      "Publications"
+    ],
+    "boost_keywords": [
+      "java",
+      "spring",
+      "spring boot",
+      "microservices",
+      "rest",
+      "sql"
+    ]
+  },
+  "react_frontend": {
+    "label": "React Frontend",
+    "sections": [
+      "Header",
+      "Summary",
+      "Skills",
+      "Projects",
+      "Experience",
+      "Education",
+      "Publications"
+    ],
+    "boost_keywords": [
+      "react",
+      "javascript",
+      "html",
+      "css"
+    ]
+  },
+  "data_analyst": {
+    "label": "Data Analyst",
+    "sections": [
+      "Header",
+      "Summary",
+      "Skills",
+      "Projects",
+      "Experience",
+      "Education",
+      "Publications"
+    ],
+    "boost_keywords": [
+      "sql",
+      "power bi",
+      "tableau",
+      "excel",
+      "dashboard",
+      "python",
+      "pandas"
+    ]
+  },
+  "consulting_general": {
+    "label": "Consulting / General",
+    "sections": [
+      "Header",
+      "Summary",
+      "Skills",
+      "Experience",
+      "Projects",
+      "Education",
+      "Publications"
+    ]
+  },
+  "minimal_one_page": {
+    "label": "Minimal One Page",
+    "sections": [
+      "Header",
+      "Summary",
+      "Skills",
+      "Projects",
+      "Experience",
+      "Education"
+    ]
+  }
+}

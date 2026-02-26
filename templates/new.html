@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="card">
+    <div class="row between">
+        <div>
+            <h1 class="h1">Create Application</h1>
+            <p class="muted">
+                Paste the full JD (requirements + responsibilities). The engine will generate tailored DOCX + PDF +
+                cover letter + recruiter message.
+            </p>
+        </div>
+        <a class="btn ghost" href="/">Back</a>
+    </div>
+
+    <form method="post" action="/generate" class="panel" style="margin-top:14px;">
+        <div class="panel-title">Job details</div>
+
+        <div class="grid-2" style="margin-top:10px;">
+            <div>
+                <div class="tiny muted">Company (optional)</div>
+                <input class="input" type="text" name="company" placeholder="e.g., Tata Consultancy Services" />
+                <div class="muted small" style="margin-top:6px;">
+                    If empty, we’ll try to detect it from the JD.
+                </div>
+            </div>
+
+            <div>
+                <div class="tiny muted">Role title (optional)</div>
+                <input class="input" type="text" name="role_title" placeholder="e.g., AI Solutions Developer" />
+                <div class="muted small" style="margin-top:6px;">
+                    If empty, we’ll try to detect it from the JD.
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top:14px;">
+            <div class="tiny muted">Job Description (required)</div>
+            <textarea class="input" name="jd_text" rows="14"
+                placeholder="Paste the full JD here (Responsibilities + Requirements + Preferred)…"></textarea>
+            <div class="muted small" style="margin-top:8px;">
+                Tips:
+                <ul class="list">
+                    <li>Include <b>requirements + responsibilities</b> for best match.</li>
+                    <li>Don’t paste just the top summary — paste the full text.</li>
+                    <li>If you see “low signal” later, it usually means the JD was incomplete.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row wrap" style="margin-top:14px;">
+            <button class="btn primary" type="submit">Generate resume package</button>
+            <a class="btn ghost" href="/applications">View applications</a>
+        </div>
+    </form>
+</section>
+
+{% endblock %}

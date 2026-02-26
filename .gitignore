@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large output files (these can be regenerated)
+outputs/*.pdf
+outputs/*.docx
+outputs/*.json
+
+# Data files (may contain sensitive info)
+data/*.json
+!data/*.seed.json

@@ -1,0 +1,17 @@
+{
+    "companies": [
+        "Apex Systems",
+        "IBM",
+        "Deloitte",
+        "Accenture",
+        "Ford",
+        "GM"
+    ],
+    "roles": [
+        "Java Full Stack Developer",
+        "Application Developer",
+        "Software Engineer",
+        "Data Analyst",
+        "React Developer"
+    ]
+}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card" style="padding:18px;">
+
+    <div class="row between" style="align-items:center;">
+        <div>
+            <h1 class="h1">PDF Preview</h1>
+            <p class="muted" style="margin:6px 0 0;">{{ filename }}</p>
+        </div>
+        <div class="row gap">
+            <a class="btn secondary" href="/applications">Back</a>
+            <a class="btn primary" href="/download?path={{ path|urlencode }}">Download</a>
+        </div>
+    </div>
+
+    <div class="pdf-frame">
+        <iframe src="/pdf-inline?path={{ path|urlencode }}" title="PDF Preview" loading="lazy">
+        </iframe>
+    </div>
+
+</section>
+{% endblock %}

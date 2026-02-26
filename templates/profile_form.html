@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+
+    <div class="page-title">
+        <div>
+            <h1>Resume Builder</h1>
+            <div class="subtitle">Notion-style blocks • clean edits • fast updates</div>
+        </div>
+        <div class="row gap">
+            <a class="btn ghost" href="/">Back</a>
+            <button class="btn" type="button" id="expandAllBtn">Expand all</button>
+            <button class="btn" type="button" id="collapseAllBtn">Collapse all</button>
+        </div>
+    </div>
+
+    {% if saved %}
+    <section class="block">
+        <div class="block-body" style="border-left: 4px solid rgba(24,208,124,.85);">
+            ✅ Profile saved.
+        </div>
+    </section>
+    {% endif %}
+
+    {% if error %}
+    <section class="block">
+        <div class="block-body" style="border-left: 4px solid rgba(255,59,59,.85);">
+            ❌ {{ error }}
+        </div>
+    </section>
+    {% endif %}
+
+    <form class="form" method="post" action="/profile/save">
+
+        <!-- BASICS -->
+        <section class="block collapsible open" data-block>
+            <div class="block-head">
+                <div class="block-title">
+                    <span class="emoji">👤</span>
+                    Basics
+                </div>
+                <button class="block-toggle" type="button" data-toggle>Hide</button>
+            </div>
+            <div class="block-body">
+                <div class="grid-2">
+                    <div class="field">
+                        <label>Full Name</label>
+                        <input name="name" value="{{ p.basics.name }}" />
+                    </div>
+                    <div class="field">
+                        <label>Location</label>
+                        <input name="location" value="{{ p.basics.location }}" placeholder="Southfield, MI, USA" />
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label>Email</label>
+                        <input name="email" value="{{ p.basics.email }}" />
+                    </div>
+                    <div class="field">
+                        <label>Phone</label>
+                        <input name="phone" value="{{ p.basics.phone }}" />
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label>LinkedIn</label>
+                        <input name="linkedin" value="{{ p.basics.linkedin }}" />
+                    </div>
+                    <div class="field">
+                        <label>Open to relocation</label>
+                        <select name="open_to_relocation">
+                            <option value="true" {% if p.basics.open_to_relocation %}selected{% endif %}>Yes</option>
+                            <option value="false" {% if not p.basics.open_to_relocation %}selected{% endif %}>No
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUMMARY -->
+        <section class="block collapsible open" data-block>
+            <div class="block-head">
+                <div class="block-title">
+                    <span class="emoji">📝</span>
+                    Summary
+                </div>
+                <button class="block-toggle" type="button" data-toggle>Hide</button>
+            </div>
+            <div class="block-body">
+                <div class="field">
+                    <label>Professional Summary</label>
+                    <textarea name="summary" rows="4">{{ p.summary }}</textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="block collapsible open" data-block>
+            <div class="block-head">
+                <div class="block-title">
+                    <span class="emoji">🧠</span>
+                    Skills
+                </div>
+                <button class="block-toggle" type="button" data-toggle>Hide</button>
+            </div>
+            <div class="block-body">
+                <div class="muted small" style="margin-bottom: 10px;">
+                    Use comma-separated values. Keep it truthful. The app adds safe “alignment” bridges (SQL →
+                    PostgreSQL wording)
+                    without claiming skills you don’t have.
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label>Programming</label>
+                        <textarea name="skills_programming" rows="3">{{ skills_text["Programming"] }}</textarea>
+                    </div>
+                    <div class="field">
+                        <label>Web & Frontend</label>
+                        <textarea name="skills_web" rows="3">{{ skills_text["Web & Frontend"] }}</textarea>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label>Data & Databases</label>
+                        <textarea name="skills_data" rows="3">{{ skills_text["Data & Databases"] }}</textarea>
+                    </div>
+                    <div class="field">
+                        <label>Data Analysis & ML</label>
+                        <textarea name="skills_ml" rows="3">{{ skills_text["Data Analysis & ML"] }}</textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Tools</label>
+                    <textarea name="skills_tools" rows="3">{{ skills_text["Tools"] }}</textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="block collapsible" data-block>
+            <div class="block-head">
+                <div class="block-title">
+                    <span class="emoji">💼</span>
+                    Experience
+                </div>
+                <button class="block-toggle" type="button" data-toggle>Show</button>
+            </div>
+            <div class="block-body">
+                <div class="muted small" style="margin-bottom: 10px;">Format per entry:</div>
+                <pre class="muted small" style="white-space:pre-wrap; margin-top:0;">
+Title | Company | Location | Start | End
+- bullet
+- bullet
+
+(next entry...)
+        </pre>
+
+                <div class="field">
+                    <label>Experience blocks</label>
+                    <textarea name="experience_block" rows="10">{{ experience_block }}</textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="block collapsible" data-block>
+            <div class="block-head">
+                <div class="block-title">
+                    <span class="emoji">🧩</span>
+                    Projects
+                </div>
+                <button class="block-toggle" type="button" data-toggle>Show</button>
+            </div>
+            <div class="block-body">
+                <div class="muted small" style="margin-bottom: 10px;">Format per entry:</div>
+                <pre class="muted small" style="white-space:pre-wrap; margin-top:0;">
+Project Name | Tech Stack
+- bullet
+- bullet
+
+(next entry...)
+        </pre>
+
+                <div class="field">
+                    <label>Project blocks</label>
+                    <textarea name="projects_block" rows="10">{{ projects_block }}</textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="block collapsible" data-block>
+            <div class="block-head">
+                <div class="block-title">
+                    <span class="emoji">🎓</span>
+                    Education
+                </div>
+                <button class="block-toggle" type="button" data-toggle>Show</button>
+            </div>
+            <div class="block-body">
+                <div class="muted small" style="margin-bottom: 10px;">One per line: Degree | School | Start | End</div>
+                <div class="field">
+                    <label>Education lines</label>
+                    <textarea name="education_lines" rows="4">{{ education_lines }}</textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- PUBLICATIONS -->
+        <section class="block collapsible" data-block>
+            <div class="block-head">
+                <div class="block-title">
+                    <span class="emoji">📚</span>
+                    Publications
+                </div>
+                <button class="block-toggle" type="button" data-toggle>Show</button>
+            </div>
+            <div class="block-body">
+                <div class="muted small" style="margin-bottom: 10px;">One per line: Title | Venue | Date | Link</div>
+                <div class="field">
+                    <label>Publication lines</label>
+                    <textarea name="publication_lines" rows="4">{{ publication_lines }}</textarea>
+                </div>
+            </div>
+        </section>
+
+        <div class="row gap">
+            <button class="btn primary" type="submit">Save Profile</button>
+            <a class="btn" href="/profile">Reload</a>
+        </div>
+
+    </form>
+</div>
+{% endblock %}
